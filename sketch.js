@@ -162,17 +162,6 @@ drawWaningGibbous = function(selectedProgram) {
     gl.drawArrays(gl.POINTS, 0, 1);
 };
 
-
-drawWaxingGibbous = function(selectedProgram) {
-    vertices = [];
-    let t = drawCount * 1e-4;
-    vertices.push(-0.5, 0.5, 15, 0.3);
-    currentProgram = getProgram("waxing-gibbous");
-    gl.useProgram(currentProgram);
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
-    gl.drawArrays(gl.POINTS, 0, 1);
-};
-
 drawWaxingGibbous = function(selectedProgram) {
     vertices = [];
     let t = drawCount * 1e-4;
