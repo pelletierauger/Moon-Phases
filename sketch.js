@@ -155,7 +155,7 @@ drawLastQuarterMoon = function(selectedProgram) {
 drawWaningGibbous = function(selectedProgram) {
     vertices = [];
     let t = drawCount * 1e-4;
-    vertices.push(-0.5, -0.5, 15, 0.3);
+    vertices.push(-0.5 + (1/16), -0.5, 15, 0.3);
     currentProgram = getProgram("waning-gibbous");
     gl.useProgram(currentProgram);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
@@ -165,7 +165,7 @@ drawWaningGibbous = function(selectedProgram) {
 drawWaxingGibbous = function(selectedProgram) {
     vertices = [];
     let t = drawCount * 1e-4;
-    vertices.push(-0.5, 0.5, 15, 0.3);
+    vertices.push(-0.5 + (1/16), 0.5, 15, 0.3);
     currentProgram = getProgram("waxing-gibbous");
     gl.useProgram(currentProgram);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
@@ -196,7 +196,7 @@ drawNewMoon = function(selectedProgram) {
 drawWaxingCrescentMoon = function(selectedProgram) {
     vertices = [];
     let t = drawCount * 1e-4;
-    vertices.push(0.5, 0.5, 15, 0.3);
+    vertices.push(0.5 - (1/16), 0.5, 15, 0.3);
     currentProgram = getProgram("waxing-crescent-moon");
     gl.useProgram(currentProgram);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
@@ -206,7 +206,7 @@ drawWaxingCrescentMoon = function(selectedProgram) {
 drawWaningCrescentMoon = function(selectedProgram) {
     vertices = [];
     let t = drawCount * 1e-4;
-    vertices.push(0.5, -0.5, 15, 0.3);
+    vertices.push(0.5 - (1/16), -0.5, 15, 0.3);
     currentProgram = getProgram("waning-crescent-moon");
     gl.useProgram(currentProgram);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
