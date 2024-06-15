@@ -56,7 +56,7 @@ firstQuarterMoon.fragText = `
         // col = col * col * (3.0 - 2.0 * col);
         vec3 randCol = vec3(rand(pos), rand(pos+vec2(10.)), rand(pos+vec2(20.)));
         float alpha = smoothstep(0., 0.2, distSquared);
-        gl_FragColor = vec4(col * vec3(0.5, 0.8, 1.) * 0.8 - randCol * 0.1, alpha);
+        gl_FragColor = vec4(col * vec3(0.5, 0.8, 1.).bgr * 0.8 - randCol * 0.1, alpha);
         
     }
     // endGLSL
@@ -123,7 +123,7 @@ lastQuarterMoon.fragText = `
         // col = col * col * (3.0 - 2.0 * col);
         vec3 randCol = vec3(rand(pos), rand(pos+vec2(10.)), rand(pos+vec2(20.)));
         float alpha = smoothstep(0., 0.2, distSquared);
-        gl_FragColor = vec4(col * vec3(0.5, 0.8, 1.) * 0.8 - randCol * 0.1, alpha);
+        gl_FragColor = vec4(col * vec3(0.5, 0.8, 1.).bgr * 0.8 - randCol * 0.1, alpha);
         
     }
     // endGLSL
@@ -186,7 +186,7 @@ full.fragText = `
         // col = col * col * (3.0 - 2.0 * col);
         vec3 randCol = vec3(rand(pos), rand(pos+vec2(10.)), rand(pos+vec2(20.)));
         float alpha = smoothstep(0., 0.2, distSquared);
-        gl_FragColor = vec4(col * vec3(0.5, 0.8, 1.) - randCol * 0.1, alpha);
+        gl_FragColor = vec4(col * vec3(0.5, 0.8, 1.).bgr - randCol * 0.1, alpha);
         
     }
     // endGLSL
@@ -250,7 +250,7 @@ newMoon.fragText = `
         // col = col * col * (3.0 - 2.0 * col);
         vec3 randCol = vec3(rand(pos), rand(pos+vec2(10.)), rand(pos+vec2(20.)));
         float alpha = smoothstep(0., 0.2, distSquared);
-        gl_FragColor = vec4(col * vec3(0.5, 0.8, 1.) - randCol * 0.1, alpha);
+        gl_FragColor = vec4(col * vec3(0.5, 0.8, 1.).bgr - randCol * 0.1, alpha);
         
     }
     // endGLSL
@@ -314,7 +314,7 @@ waxingCrescentMoon.fragText = `
         // col = col * col * (3.0 - 2.0 * col);
         vec3 randCol = vec3(rand(pos), rand(pos+vec2(10.)), rand(pos+vec2(20.)));
         float alpha = smoothstep(0., 0.2, distSquared);
-        gl_FragColor = vec4(col * vec3(0.5, 0.8, 1.) - randCol * 0.1, alpha);
+        gl_FragColor = vec4(col * vec3(0.5, 0.8, 1.).bgr - randCol * 0.1, alpha);
         
     }
     // endGLSL
@@ -379,7 +379,7 @@ waningCrescentMoon.fragText = `
         // col = col * col * (3.0 - 2.0 * col);
         vec3 randCol = vec3(rand(pos), rand(pos+vec2(10.)), rand(pos+vec2(20.)));
         float alpha = smoothstep(0., 0.2, distSquared);
-        gl_FragColor = vec4(col * vec3(0.5, 0.8, 1.) - randCol * 0.1, alpha);
+        gl_FragColor = vec4(col * vec3(0.5, 0.8, 1.).bgr - randCol * 0.1, alpha);
         
     }
     // endGLSL
@@ -442,7 +442,7 @@ waningGibbous.fragText = `
         // col = col * col * (3.0 - 2.0 * col);
         vec3 randCol = vec3(rand(pos), rand(pos+vec2(10.)), rand(pos+vec2(20.)));
         float alpha = smoothstep(0., 0.2, distSquared);
-        gl_FragColor = vec4(col * vec3(0.5, 0.8, 1.) - randCol * 0.1, alpha);
+        gl_FragColor = vec4(col * vec3(0.5, 0.8, 1.).bgr - randCol * 0.1, alpha);
         
     }
     // endGLSL
@@ -507,7 +507,7 @@ waxingGibbous.fragText = `
         // col = col * col * (3.0 - 2.0 * col);
         vec3 randCol = vec3(rand(pos), rand(pos+vec2(10.)), rand(pos+vec2(20.)));
         float alpha = smoothstep(0.0, 0.2, distSquared);
-        gl_FragColor = vec4(col * vec3(0.5, 0.8, 1.) - randCol * 0.1, alpha);
+        gl_FragColor = vec4(col * vec3(0.5, 0.8, 1.).bgr - randCol * 0.1, alpha);
         
     }
     // endGLSL
