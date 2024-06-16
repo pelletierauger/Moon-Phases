@@ -6,3 +6,12 @@ ffmpeg -y -i /Users/guillaumepelletier/Movies/2024-06-15_17-42-39.mkv \
 gifsicle -O3 --lossy=120 \
 -o /Users/guillaumepelletier/Desktop/moon-phases-540-compressed-120.gif \
 /Users/guillaumepelletier/Desktop/moon-phases-540.gif
+
+ffmpeg -y -i /Users/guillaumepelletier/Movies/2024-06-15_17-42-39.mkv \
+-ss 00:00:02.000 -to 00:00:06.000 \
+-vf "colorlevels=rimin=0.0:gimin=0.0:bimin=0.0:rimax=0.85:gimax=0.85:bimax=0.85,fps=24,scale=540:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" \
+/Users/guillaumepelletier/Desktop/moon-phases-540-levels.gif
+
+gifsicle -O3 --lossy=120 \
+-o /Users/guillaumepelletier/Desktop/moon-phases-540-levels-compressed-120.gif \
+/Users/guillaumepelletier/Desktop/moon-phases-540-levels.gif
